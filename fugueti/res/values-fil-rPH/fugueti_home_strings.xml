@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">I-set up ang Fugueti</string>
     <string name="fugueti_onboarding_welcome">Maligayang pagdating sa Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Kilalanin ang bagong Fugueti</string>
+    <string name="fugueti_android_backup_title">I-restore ang backup</string>
+    <string name="fugueti_android_backup_message">May nakitang Android backup ng iyong home screen. Gusto mo ba itong i-restore?</string>
+    <string name="fugueti_android_backup_decline">Hindi, salamat</string>
+    <string name="fugueti_android_backup_restore">I-restore</string>
 </resources>

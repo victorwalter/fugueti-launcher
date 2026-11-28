@@ -61,12 +61,13 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <!-- Fugueti: Fugueti's settings icon, also shown on the splash screen when settings open -->
         <activity
             android:name="app.lawnchair.ui.preferences.PreferenceActivity"
             android:autoRemoveFromRecents="true"
             android:exported="true"
             android:label="@string/settings_button_text"
-            android:icon="@mipmap/ic_settings"
+            android:icon="@mipmap/fugueti_ic_settings"
             android:theme="@style/Theme.Lawnchair"
             android:windowSoftInputMode="adjustResize"
             android:enableOnBackInvokedCallback="true">

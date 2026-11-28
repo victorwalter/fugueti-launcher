@@ -42,6 +42,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.content.FileProvider
 import androidx.profileinstaller.ProfileInstaller
+import app.fugueti.backup.AndroidBackupRestore
 import app.fugueti.update.FuguetiUpdates
 import app.lawnchair.backup.LawnchairBackup
 import app.lawnchair.flowerpot.Flowerpot
@@ -70,6 +71,13 @@ class LawnchairApp : LauncherApplication() {
     private val isAtleastT = Utilities.ATLEAST_T
     internal var accessibilityService: LawnchairAccessibilityService? = null
     val isVibrateOnIconAnimation: Boolean by unsafeLazy { getSystemUiBoolean("config_vibrateOnIconAnimation", false) }
+
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(base)
+        // Fugueti: an Android backup the user chose to restore goes in place now, before any
+        // provider, database or preference of this process is opened.
+        if (isMainProcess()) AndroidBackupRestore.applyIfAccepted(this)
+    }
 
     override fun onCreate() {
         super.onCreate()

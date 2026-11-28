@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Fugueti-ஐ அமைக்கவும்</string>
     <string name="fugueti_onboarding_welcome">Fugueti-க்கு வரவேற்கிறோம்!</string>
     <string name="fugueti_onboarding_major_upgrade_title">புதிய Fugueti-ஐ அறிமுகப்படுத்துகிறோம்</string>
+    <string name="fugueti_android_backup_title">காப்புப்பிரதியை மீட்டமை</string>
+    <string name="fugueti_android_backup_message">உங்கள் முகப்புத் திரையின் Android காப்புப்பிரதி கண்டறியப்பட்டது. அதை மீட்டமைக்க விரும்புகிறீர்களா?</string>
+    <string name="fugueti_android_backup_decline">வேண்டாம், நன்றி</string>
+    <string name="fugueti_android_backup_restore">மீட்டமை</string>
 </resources>

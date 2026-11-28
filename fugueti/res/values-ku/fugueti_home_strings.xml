@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Fugueti saz bike</string>
     <string name="fugueti_onboarding_welcome">Bi xêr hatî Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Fugueti-ya nû nas bike</string>
+    <string name="fugueti_android_backup_title">Paşvekirinê vegerîne</string>
+    <string name="fugueti_android_backup_message">Paşvekirineke Android a ekrana te ya sereke hat dîtin. Tu dixwazî wê vegerînî?</string>
+    <string name="fugueti_android_backup_decline">Na, spas</string>
+    <string name="fugueti_android_backup_restore">Vegerîne</string>
 </resources>

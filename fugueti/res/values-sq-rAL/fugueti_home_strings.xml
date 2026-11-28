@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Konfiguro Fugueti</string>
     <string name="fugueti_onboarding_welcome">Mirë se vini në Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Njihuni me Fugueti-n e ri</string>
+    <string name="fugueti_android_backup_title">Rikthe kopjen rezervë</string>
+    <string name="fugueti_android_backup_message">U gjet një kopje rezervë Android e ekranit tënd bazë. Dëshiron ta rikthesh?</string>
+    <string name="fugueti_android_backup_decline">Jo, faleminderit</string>
+    <string name="fugueti_android_backup_restore">Rikthe</string>
 </resources>

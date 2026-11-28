@@ -1,3 +1,4 @@
+// Modified by Fugueti Launcher contributors (2026): see the "Fugueti" comments below.
 package com.android.launcher3;
 
 import static com.android.launcher3.LauncherPrefs.NO_DB_FILES_RESTORED;
@@ -5,7 +6,10 @@ import static com.android.launcher3.LauncherPrefs.NO_DB_FILES_RESTORED;
 import android.app.backup.BackupAgent;
 import android.app.backup.BackupDataInput;
 import android.app.backup.BackupDataOutput;
+import android.app.backup.FullBackupDataOutput;
 import android.os.ParcelFileDescriptor;
+
+import app.fugueti.backup.AndroidBackupRestore;
 
 import com.android.launcher3.logging.FileLog;
 import com.android.launcher3.provider.RestoreDbTask;
@@ -50,8 +54,21 @@ public class LauncherBackupAgent extends BackupAgent {
         // Doesn't do incremental backup/restore
     }
 
+    // Fugueti: databases are copied as single files (see AndroidBackupRestore.prepareForBackup).
+    @Override
+    public void onFullBackup(FullBackupDataOutput data) throws IOException {
+        AndroidBackupRestore.prepareForBackup(this);
+        super.onFullBackup(data);
+    }
+
     @Override
     public void onRestoreFinished() {
+        // Fugueti: keep the restored home screen aside; the first start asks whether to use it
+        // and, if so, applies it and marks it pending as below (see AndroidBackupRestore).
+        if (AndroidBackupRestore.stage(this)) {
+            FileLog.d(TAG, "onRestoreFinished: staged for the first start to ask");
+            return;
+        }
         RestoreDbTask.setPending(this);
         FileLog.d(TAG, "onRestoreFinished: set pending for RestoreDbTask");
         markIfFilesWereNotActuallyRestored();
@@ -64,8 +81,9 @@ public class LauncherBackupAgent extends BackupAgent {
      * backup/restore code itself.
      */
     private void markIfFilesWereNotActuallyRestored() {
-        File directory = new File(getDatabasePath(InvariantDeviceProfile.INSTANCE.get(this).dbFile)
-                .getParent());
+        // Fugueti: not through InvariantDeviceProfile, which needs LawnchairApp (not created in
+        // this restricted backup process; it threw "lateinit property instance").
+        File directory = getDatabasePath(LauncherFiles.LAUNCHER_DB).getParentFile();
         if (!directory.exists()) {
             FileLog.e(TAG, "restore failed as target database directory doesn't exist");
         } else {

@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">הגדרת Fugueti</string>
     <string name="fugueti_onboarding_welcome">ברוכים הבאים ל-Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">הכירו את Fugueti החדש</string>
+    <string name="fugueti_android_backup_title">שחזור גיבוי</string>
+    <string name="fugueti_android_backup_message">נמצא גיבוי Android של מסך הבית שלך. לשחזר אותו?</string>
+    <string name="fugueti_android_backup_decline">לא תודה</string>
+    <string name="fugueti_android_backup_restore">שחזור</string>
 </resources>

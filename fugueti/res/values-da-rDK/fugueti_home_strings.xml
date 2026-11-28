@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Konfigurer Fugueti</string>
     <string name="fugueti_onboarding_welcome">Velkommen til Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Mød det nye Fugueti</string>
+    <string name="fugueti_android_backup_title">Gendan sikkerhedskopi</string>
+    <string name="fugueti_android_backup_message">Der blev fundet en Android-sikkerhedskopi af din startskærm. Vil du gendanne den?</string>
+    <string name="fugueti_android_backup_decline">Nej tak</string>
+    <string name="fugueti_android_backup_restore">Gendan</string>
 </resources>

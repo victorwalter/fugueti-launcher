@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Stel Fugueti op</string>
     <string name="fugueti_onboarding_welcome">Welkom by Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Ontmoet die nuwe Fugueti</string>
+    <string name="fugueti_android_backup_title">Herstel rugsteun</string>
+    <string name="fugueti_android_backup_message">’n Android-rugsteun van jou tuisskerm is gevind. Wil jy dit herstel?</string>
+    <string name="fugueti_android_backup_decline">Nee dankie</string>
+    <string name="fugueti_android_backup_restore">Herstel</string>
 </resources>

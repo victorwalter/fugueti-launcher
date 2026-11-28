@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Fugueti-ni sozlash</string>
     <string name="fugueti_onboarding_welcome">Fugueti-ga xush kelibsiz!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Yangi Fugueti bilan tanishing</string>
+    <string name="fugueti_android_backup_title">Zaxira nusxani tiklash</string>
+    <string name="fugueti_android_backup_message">Bosh ekraningizning Android zaxira nusxasi topildi. Uni tiklamoqchimisiz?</string>
+    <string name="fugueti_android_backup_decline">Yoʻq, rahmat</string>
+    <string name="fugueti_android_backup_restore">Tiklash</string>
 </resources>

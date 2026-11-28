@@ -32,6 +32,7 @@ import android.window.SplashScreen
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
+import app.fugueti.backup.AndroidBackupRestore
 import app.fugueti.drawer.PullToSearchTouchController
 import app.fugueti.gestures.GestureTouchController
 import app.fugueti.update.FuguetiUpdates
@@ -491,8 +492,10 @@ class LawnchairLauncher : QuickstepLauncher() {
     override fun onResume() {
         super.onResume()
         restartIfPending()
-        // Fugueti: asks once, so the daily update check can notify.
-        FuguetiUpdates.maybeRequestNotificationPermission(this)
+        // Fugueti: Android restored a home screen backup at install; ask whether to use it.
+        AndroidBackupRestore.maybeAsk(this)
+        // Fugueti: asks once, so the daily update check can notify (not over the question above).
+        if (!AndroidBackupRestore.isAsking()) FuguetiUpdates.maybeRequestNotificationPermission(this)
         refreshPredictionContainersFromModel()
         refreshUserProfiles()
 

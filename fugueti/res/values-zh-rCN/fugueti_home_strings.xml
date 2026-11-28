@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">设置 Fugueti</string>
     <string name="fugueti_onboarding_welcome">欢迎来到 Fugueti！</string>
     <string name="fugueti_onboarding_major_upgrade_title">全新 Fugueti 来了</string>
+    <string name="fugueti_android_backup_title">恢复备份</string>
+    <string name="fugueti_android_backup_message">找到了主屏幕的 Android 备份。要恢复吗？</string>
+    <string name="fugueti_android_backup_decline">不用了</string>
+    <string name="fugueti_android_backup_restore">恢复</string>
 </resources>

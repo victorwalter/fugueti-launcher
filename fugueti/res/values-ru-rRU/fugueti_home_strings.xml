@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Настройка Fugueti</string>
     <string name="fugueti_onboarding_welcome">Добро пожаловать в Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Встречайте новый Fugueti</string>
+    <string name="fugueti_android_backup_title">Восстановить резервную копию</string>
+    <string name="fugueti_android_backup_message">Найдена резервная копия главного экрана в Android. Восстановить её?</string>
+    <string name="fugueti_android_backup_decline">Нет, спасибо</string>
+    <string name="fugueti_android_backup_restore">Восстановить</string>
 </resources>

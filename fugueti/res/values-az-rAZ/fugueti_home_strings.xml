@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Fugueti-i qurun</string>
     <string name="fugueti_onboarding_welcome">Fugueti-ə xoş gəlmisiniz!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Yeni Fugueti ilə tanış olun</string>
+    <string name="fugueti_android_backup_title">Ehtiyat nüsxəni bərpa et</string>
+    <string name="fugueti_android_backup_message">Əsas ekranınızın Android ehtiyat nüsxəsi tapıldı. Onu bərpa etmək istəyirsiniz?</string>
+    <string name="fugueti_android_backup_decline">Xeyr, təşəkkürlər</string>
+    <string name="fugueti_android_backup_restore">Bərpa et</string>
 </resources>

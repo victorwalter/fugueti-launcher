@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Richte Fugueti ein</string>
     <string name="fugueti_onboarding_welcome">Willkommen bei Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Lerne den neuen Fugueti kennen</string>
+    <string name="fugueti_android_backup_title">Sicherung wiederherstellen</string>
+    <string name="fugueti_android_backup_message">Es wurde eine Android-Sicherung deines Startbildschirms gefunden. Möchtest du sie wiederherstellen?</string>
+    <string name="fugueti_android_backup_decline">Nein danke</string>
+    <string name="fugueti_android_backup_restore">Wiederherstellen</string>
 </resources>

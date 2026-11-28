@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Fuguetiని సెటప్ చేయండి</string>
     <string name="fugueti_onboarding_welcome">Fuguetiకి స్వాగతం!</string>
     <string name="fugueti_onboarding_major_upgrade_title">కొత్త Fuguetiని పరిచయం చేసుకోండి</string>
+    <string name="fugueti_android_backup_title">బ్యాకప్‌ను పునరుద్ధరించు</string>
+    <string name="fugueti_android_backup_message">మీ హోమ్ స్క్రీన్ యొక్క Android బ్యాకప్ కనుగొనబడింది. దాన్ని పునరుద్ధరించాలనుకుంటున్నారా?</string>
+    <string name="fugueti_android_backup_decline">వద్దు, ధన్యవాదాలు</string>
+    <string name="fugueti_android_backup_restore">పునరుద్ధరించు</string>
 </resources>

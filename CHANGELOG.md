@@ -4,6 +4,20 @@
 
 Fugueti on Launcher3 from Android 17, published as the nightly.
 
+* New installs no longer ask for notification access the first time At a Glance's settings
+  open, and At a Glance no longer shows "Tap to set up": Now playing, the only item that needs
+  that access, starts off. Turn it on in At a Glance > Now playing. Existing setups keep it as
+  it was.
+* New installs start with a 4 x 5 home screen and 4 dock icons on phones (Phone, Messages, the
+  browser and Camera). Existing setups keep their grid.
+* Android's own backup (Google account) now holds the whole setup, like a Fugueti backup file:
+  the home screen, Fugueti's settings, custom icons, drawer folders, fonts and saved wallpapers.
+  Before, it held only part of the settings and the home screen came back empty on a reinstall
+  or a new phone.
+* When Android restores that backup on install, Fugueti asks on its first start whether to
+  restore it or start fresh.
+* Fugueti's settings have their own icon, a gear in the Fugueti colors. Before, opening the
+  settings flashed Lawnchair's settings icon on the splash screen.
 * Fugueti moved to the Fugueti organization on GitHub: the app, its update check and links now
   use github.com/fugueti/launcher, and the Fugueti Feed links use github.com/fugueti/feed. The
   old addresses keep redirecting, so older versions still find updates.
@@ -34,8 +48,6 @@ Fugueti on Launcher3 from Android 17, published as the nightly.
 * Importing a Nova backup works again: it failed with an error as soon as the backup set the app
   drawer search bar, and its home screen could replace the database the running launcher had
   open. A Nova backup without a home screen search bar turns the dock search bar off.
-* New installs start with a 5 x 5 home screen and 5 dock icons on phones. Installs that kept
-  the old 7 x 12 default (7 dock icons) keep it.
 * **App drawer > Pull to search**, as in Nova: with the drawer search bar off, a swipe down in
   the lower third of the app drawer opens the search bar and the keyboard, so one thumb opens
   the drawer and searches. Back hides the search bar again. A swipe down higher up still closes

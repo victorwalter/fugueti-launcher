@@ -13,6 +13,7 @@ import android.util.Log
 import androidx.datastore.preferences.core.PreferenceDataStoreFactory
 import androidx.datastore.preferences.core.edit
 import app.fugueti.prefs.AtAGlanceDefaultMigration
+import app.fugueti.prefs.NowPlayingDefaultMigration
 import app.lawnchair.data.AppDatabase
 import app.lawnchair.preferences2.PreferenceManager2
 import com.android.launcher3.LauncherPrefs
@@ -92,19 +93,24 @@ object BackupStore {
     /** Replaces the launcher's SharedPreferences with the values of a backed up prefs XML. */
     fun applySharedPrefs(context: Context, xmlFile: File) {
         if (!xmlFile.exists()) return
+        val editor = LauncherPrefs.getPrefs(context).edit().clear()
+        if (putPrefsFromXml(editor, xmlFile)) editor.commit()
+    }
+
+    /** Puts every value of a SharedPreferences XML file into [editor]; false if unreadable. */
+    fun putPrefsFromXml(editor: SharedPreferences.Editor, xmlFile: File): Boolean {
         val root = runCatching {
             DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(xmlFile).documentElement
         }.getOrElse {
             Log.w(TAG, "Unreadable prefs backup", it)
-            return
+            return false
         }
-        val editor = LauncherPrefs.getPrefs(context).edit().clear()
         val children = root.childNodes
         for (i in 0 until children.length) {
             val node = children.item(i) as? Element ?: continue
             putPref(editor, node)
         }
-        editor.commit()
+        return true
     }
 
     private fun putPref(editor: SharedPreferences.Editor, node: Element) {
@@ -156,8 +162,9 @@ object BackupStore {
      * A backup has no entry for a setting left at its app's default. Where that default differs
      * from today's Fugueti one, write the old default for the settings the backup leaves out, so
      * the setup looks as it did:
-     * - Lawnchair backups: At a Glance on, drawer search bar shown, icon sizes 100%;
-     * - Fugueti backups from before 16.0.5 (no At a Glance migration mark): At a Glance off.
+     * - Lawnchair backups: At a Glance on, drawer search bar shown, icon sizes 100%, Now playing on;
+     * - Fugueti backups from before 16.0.5 (no At a Glance migration mark): At a Glance off;
+     * - Fugueti backups from before 16.0.6 (no Now playing migration mark): Now playing on.
      */
     suspend fun applyBackupDefaults(context: Context, backupVersionCode: Int, restoredKeys: Set<String>) {
         val prefs2 = PreferenceManager2.getInstance(context)
@@ -166,12 +173,23 @@ object BackupStore {
             if (prefs2.hideAppDrawerSearchBar.key.name !in restoredKeys) prefs2.hideAppDrawerSearchBar.set(false)
             if (prefs2.homeIconSizeFactor.key.name !in restoredKeys) prefs2.homeIconSizeFactor.set(1f)
             if (prefs2.drawerIconSizeFactor.key.name !in restoredKeys) prefs2.drawerIconSizeFactor.set(1f)
-        } else if (AtAGlanceDefaultMigration.MIGRATED.name !in restoredKeys &&
-            prefs2.enableSmartspace.key.name !in restoredKeys
-        ) {
-            prefs2.enableSmartspace.set(false)
+            if (prefs2.smartspaceNowPlaying.key.name !in restoredKeys) prefs2.smartspaceNowPlaying.set(true)
+        } else {
+            if (AtAGlanceDefaultMigration.MIGRATED.name !in restoredKeys &&
+                prefs2.enableSmartspace.key.name !in restoredKeys
+            ) {
+                prefs2.enableSmartspace.set(false)
+            }
+            if (NowPlayingDefaultMigration.MIGRATED.name !in restoredKeys &&
+                prefs2.smartspaceNowPlaying.key.name !in restoredKeys
+            ) {
+                prefs2.smartspaceNowPlaying.set(true)
+            }
         }
-        prefs2.preferencesDataStore.edit { it[AtAGlanceDefaultMigration.MIGRATED] = true }
+        prefs2.preferencesDataStore.edit {
+            it[AtAGlanceDefaultMigration.MIGRATED] = true
+            it[NowPlayingDefaultMigration.MIGRATED] = true
+        }
     }
 
     /**

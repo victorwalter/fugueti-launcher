@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">A Fugueti beállítása</string>
     <string name="fugueti_onboarding_welcome">Üdvözöl a Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Ismerd meg az új Fuguetit</string>
+    <string name="fugueti_android_backup_title">Biztonsági mentés visszaállítása</string>
+    <string name="fugueti_android_backup_message">Található egy Android biztonsági mentés a kezdőképernyőről. Szeretnéd visszaállítani?</string>
+    <string name="fugueti_android_backup_decline">Nem, köszönöm</string>
+    <string name="fugueti_android_backup_restore">Visszaállítás</string>
 </resources>
