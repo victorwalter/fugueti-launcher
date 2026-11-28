@@ -145,7 +145,7 @@ final def releaseName = "Beta 1"
 // BASE.MINOR.PATCH, where BASE is the Android version Launcher3 comes from (16, 17…).
 // versionCode = major * 1_000_000 + minor * 10_000 + patch * 100 (last two digits free for rebuilds).
 // On main this is the next release; a release bumps it and is tagged v<version>.
-final def fuguetiVersion = "16.0.5"
+final def fuguetiVersion = "16.0.6"
 final def fuguetiVersionParts = fuguetiVersion.tokenize('.').collect { it as int }
 final def fuguetiVersionCode = fuguetiVersionParts[0] * 1_000_000 + fuguetiVersionParts[1] * 10_000 + fuguetiVersionParts[2] * 100
 final def fuguetiGithubRepo = findProperty("fugueti.githubRepo") ?: "fugueti/launcher"

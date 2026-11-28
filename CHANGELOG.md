@@ -1,6 +1,6 @@
 # Fugueti Launcher changelog
 
-## Unreleased
+## 16.0.6 (2026-11-28)
 
 * New installs no longer ask for notification access the first time At a Glance's settings
   open, and At a Glance no longer shows "Tap to set up": Now playing, the only item that needs
