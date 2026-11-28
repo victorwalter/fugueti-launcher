@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Fugueti সেট আপ করুন</string>
     <string name="fugueti_onboarding_welcome">Fugueti-তে স্বাগতম!</string>
     <string name="fugueti_onboarding_major_upgrade_title">নতুন Fugueti-এর সাথে পরিচিত হোন</string>
+    <string name="fugueti_android_backup_title">ব্যাকআপ পুনরুদ্ধার</string>
+    <string name="fugueti_android_backup_message">আপনার হোম স্ক্রিনের একটি Android ব্যাকআপ পাওয়া গেছে। আপনি কি এটি পুনরুদ্ধার করতে চান?</string>
+    <string name="fugueti_android_backup_decline">না, ধন্যবাদ</string>
+    <string name="fugueti_android_backup_restore">পুনরুদ্ধার</string>
 </resources>

@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Konfigurer Fugueti</string>
     <string name="fugueti_onboarding_welcome">Velkommen til Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Møt nye Fugueti</string>
+    <string name="fugueti_android_backup_title">Gjenopprett sikkerhetskopi</string>
+    <string name="fugueti_android_backup_message">Det ble funnet en Android-sikkerhetskopi av startskjermen din. Vil du gjenopprette den?</string>
+    <string name="fugueti_android_backup_decline">Nei takk</string>
+    <string name="fugueti_android_backup_restore">Gjenopprett</string>
 </resources>

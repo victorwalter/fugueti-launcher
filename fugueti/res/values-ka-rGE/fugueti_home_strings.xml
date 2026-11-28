@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Fugueti-ის დაყენება</string>
     <string name="fugueti_onboarding_welcome">კეთილი იყოს თქვენი მობრძანება Fugueti-ში!</string>
     <string name="fugueti_onboarding_major_upgrade_title">გაიცანით ახალი Fugueti</string>
+    <string name="fugueti_android_backup_title">სარეზერვო ასლის აღდგენა</string>
+    <string name="fugueti_android_backup_message">ნაპოვნია თქვენი მთავარი ეკრანის Android-ის სარეზერვო ასლი. გსურთ მისი აღდგენა?</string>
+    <string name="fugueti_android_backup_decline">არა, გმადლობთ</string>
+    <string name="fugueti_android_backup_restore">აღდგენა</string>
 </resources>

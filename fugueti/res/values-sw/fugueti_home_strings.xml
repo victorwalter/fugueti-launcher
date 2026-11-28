@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Weka Fugueti</string>
     <string name="fugueti_onboarding_welcome">Karibu kwenye Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Kutana na Fugueti mpya</string>
+    <string name="fugueti_android_backup_title">Rejesha nakala rudufu</string>
+    <string name="fugueti_android_backup_message">Nakala rudufu ya Android ya skrini yako ya kwanza imepatikana. Je, ungependa kuirejesha?</string>
+    <string name="fugueti_android_backup_decline">Hapana, asante</string>
+    <string name="fugueti_android_backup_restore">Rejesha</string>
 </resources>

@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Fugueti 설정하기</string>
     <string name="fugueti_onboarding_welcome">Fugueti에 오신것을 환영합니다!</string>
     <string name="fugueti_onboarding_major_upgrade_title">새 Fugueti를 만나세요</string>
+    <string name="fugueti_android_backup_title">백업 복원</string>
+    <string name="fugueti_android_backup_message">홈 화면의 Android 백업을 찾았습니다. 복원하시겠습니까?</string>
+    <string name="fugueti_android_backup_decline">아니요</string>
+    <string name="fugueti_android_backup_restore">복원</string>
 </resources>

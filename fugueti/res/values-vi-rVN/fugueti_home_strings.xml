@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Cài đặt Fugueti</string>
     <string name="fugueti_onboarding_welcome">Chào mừng tới Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Giới thiệu Fugueti mới</string>
+    <string name="fugueti_android_backup_title">Khôi phục bản sao lưu</string>
+    <string name="fugueti_android_backup_message">Đã tìm thấy bản sao lưu Android của màn hình chính. Bạn có muốn khôi phục không?</string>
+    <string name="fugueti_android_backup_decline">Không, cảm ơn</string>
+    <string name="fugueti_android_backup_restore">Khôi phục</string>
 </resources>

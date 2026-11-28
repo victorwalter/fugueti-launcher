@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">راه‌اندازی Fugueti</string>
     <string name="fugueti_onboarding_welcome">به Fugueti خوش آمدید!</string>
     <string name="fugueti_onboarding_major_upgrade_title">با Fugueti جدید آشنا شوید</string>
+    <string name="fugueti_android_backup_title">بازیابی پشتیبان</string>
+    <string name="fugueti_android_backup_message">یک پشتیبان Android از صفحهٔ اصلی شما پیدا شد. می‌خواهید آن را بازیابی کنید؟</string>
+    <string name="fugueti_android_backup_decline">نه، ممنون</string>
+    <string name="fugueti_android_backup_restore">بازیابی</string>
 </resources>

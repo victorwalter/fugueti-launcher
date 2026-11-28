@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Fuguetiን ያዋቅሩ</string>
     <string name="fugueti_onboarding_welcome">ወደ Fugueti እንኳን በደህና መጡ!</string>
     <string name="fugueti_onboarding_major_upgrade_title">አዲሱን Fugueti ይተዋወቁ</string>
+    <string name="fugueti_android_backup_title">ምትኬ ወደነበረበት መልስ</string>
+    <string name="fugueti_android_backup_message">የመነሻ ማያ ገጽዎ የAndroid ምትኬ ተገኝቷል። ወደነበረበት መመለስ ይፈልጋሉ?</string>
+    <string name="fugueti_android_backup_decline">አይ፣ አመሰግናለሁ</string>
+    <string name="fugueti_android_backup_restore">ወደነበረበት መልስ</string>
 </resources>

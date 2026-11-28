@@ -77,6 +77,40 @@ Taking `restored.db` in the importing process (`reopenDb`) was tried: the model 
 was still on the old grid and wrote the old grid state back in its last moments, so the next start
 "migrated" the old layout over Nova's.
 
+## Android's own backup (reinstall, new phone)
+
+Android's backup (`LauncherBackupAgent`; `res/xml/backupscheme.xml` up to Android 11,
+`fugueti/res/xml/fugueti_data_extraction_rules.xml` from 12, keep both the same) holds what a
+Fugueti backup file holds: the whole `databases` folder except caches and temporary files (the
+home screen database is named after the grid, `launcher_{rows}_{columns}_{dock}.db`, so no fixed
+list works; until 16.0.5 the list had only Launcher3's names and the home screen was never
+backed up), `com.android.launcher3.prefs.xml`, the DataStore (`files/datastore/preferences.preferences_pb`),
+`files/customFonts` and `files/wallpapers`. `onFullBackup` checkpoints the databases first
+(`AndroidBackupRestore.prepareForBackup`).
+
+Android restores them when the app is installed, before it ever runs, so the app cannot ask
+first. Instead (`AndroidBackupRestore`):
+
+1. `onRestoreFinished` (restricted backup process: no `LawnchairApp`, so nothing that needs the
+   IDP or the Dagger graph) moves the restored databases (`launcher*`, `preferences*`), the prefs
+   XML, the DataStore and the two folders to `no_backup/android_restore/` and does **not** call
+   `RestoreDbTask.setPending`. If no home screen database was restored (backups from 16.0.5 and
+   before), or moving fails, the stock path runs.
+2. The first start is a new install (default layout and settings) and
+   `LawnchairLauncher.onResume` asks "Restore backup?".
+3. **No thanks**: the folder is deleted, and so are the widget ids Android allocated for the
+   backup's widgets (`AppWidgetsRestoredReceiver` stored them in `appwidget_ids`).
+4. **Restore**: writes `accepted` and restarts. The next process, in
+   `LawnchairApp.attachBaseContext` (before any provider, database, DataStore or preference is
+   opened), deletes the first run's files, moves the restored ones back, replaces the prefs with
+   the restored ones (keeping the live `appwidget_ids` / `appwidget_old_ids`) and writes what
+   `setPending` would have: `restored_task_pending` (device type of the backup) and
+   `first_load_after_restore`. From there it is the stock Android restore (`RestoreDbTask`).
+
+Test: `adb shell bmgr backupnow <pkg>`, `adb uninstall` and `adb install` (Android restores at
+install), open the launcher; check both answers, that the backup's widgets come back after
+Restore and that Fugueti's settings (e.g. a gesture) come back too.
+
 ## Pitfalls (all hit on 2026-11-27)
 
 - **Never replace or delete a database file the running launcher has open.** Its next write fails
@@ -113,9 +147,15 @@ was still on the old grid and wrote the old grid state back in its last moments,
   DataStore migration) stores "off" once for an updated install that never set it and marks the
   store (`fugueti_at_a_glance_default_migrated`). A Fugueti backup without that mark is from
   before: `applyBackupDefaults` keeps At a Glance off when the backup has no value for it.
+- **Now playing default (16.0.6).** On until 16.0.5, off since (it needs notification access,
+  asked for as soon as At a Glance's settings opened). `NowPlayingDefaultMigration` stores "on"
+  for an updated install that never set it (mark `fugueti_now_playing_default_migrated`);
+  `applyBackupDefaults` sets it on for Lawnchair backups and Fugueti backups without the mark
+  that leave it out.
 - **Defaults are not stored.** An `IntPref` default that changes (the phone grid went from 7 x 12
-  to 5 x 5 in 16.0.5) changes the grid of every install that never touched it; the
-  `PreferenceManager` migration writes the old values for existing installs. Write such migrations
+  to 5 x 5 in 16.0.5 and to 4 x 5 with 4 dock icons in 16.0.6) changes the grid of every install
+  that never touched it; the `PreferenceManager` migration writes the old values for existing
+  installs (7 x 12 x 7 for prefs version < 3, 5 x 5 x 5 for version 3). Write such migrations
   before the preference listener is registered (see the comment there).
 - After editing preference classes, clean the Kotlin build dirs before building (stale
   `$stable` fields crash at start).

@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Siapkan Fugueti</string>
     <string name="fugueti_onboarding_welcome">Selamat datang di Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Kenali Fugueti yang baru</string>
+    <string name="fugueti_android_backup_title">Pulihkan cadangan</string>
+    <string name="fugueti_android_backup_message">Cadangan Android untuk layar utama Anda ditemukan. Ingin memulihkannya?</string>
+    <string name="fugueti_android_backup_decline">Tidak, terima kasih</string>
+    <string name="fugueti_android_backup_restore">Pulihkan</string>
 </resources>

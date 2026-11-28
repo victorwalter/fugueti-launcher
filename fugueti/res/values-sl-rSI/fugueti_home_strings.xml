@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Nastavite Fugueti</string>
     <string name="fugueti_onboarding_welcome">Dobrodošli v Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Spoznajte novi Fugueti</string>
+    <string name="fugueti_android_backup_title">Obnovi varnostno kopijo</string>
+    <string name="fugueti_android_backup_message">Najdena je bila varnostna kopija začetnega zaslona v Androidu. Jo želite obnoviti?</string>
+    <string name="fugueti_android_backup_decline">Ne, hvala</string>
+    <string name="fugueti_android_backup_restore">Obnovi</string>
 </resources>

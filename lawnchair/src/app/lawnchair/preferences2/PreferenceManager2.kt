@@ -791,9 +791,11 @@ class PreferenceManager2 @Inject constructor(
         defaultValue = true,
     )
 
+    // Fugueti: off by default (it needs notification access, which a new install asked for right
+    // away); existing installs keep it on, see NowPlayingDefaultMigration.
     val smartspaceNowPlaying = preference(
         key = booleanPreferencesKey("enable_smartspace_now_playing"),
-        defaultValue = true,
+        defaultValue = false,
     )
 
     val smartspaceOnboarding = preference(
@@ -1087,6 +1089,8 @@ class PreferenceManager2 @Inject constructor(
                     SharedPreferencesMigration(context = it).produceMigration(),
                     // Fugueti: At a Glance became on by default; existing installs keep it off.
                     app.fugueti.prefs.AtAGlanceDefaultMigration(it),
+                    // Fugueti: Now playing became off by default; existing installs keep it on.
+                    app.fugueti.prefs.NowPlayingDefaultMigration(it),
                 )
             },
         )

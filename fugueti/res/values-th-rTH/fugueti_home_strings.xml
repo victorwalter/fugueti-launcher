@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">ตั้งค่า Fugueti</string>
     <string name="fugueti_onboarding_welcome">ยินดีต้อนรับสู่ Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">พบกับ Fugueti ใหม่</string>
+    <string name="fugueti_android_backup_title">กู้คืนข้อมูลสำรอง</string>
+    <string name="fugueti_android_backup_message">พบข้อมูลสำรอง Android ของหน้าจอหลัก ต้องการกู้คืนหรือไม่</string>
+    <string name="fugueti_android_backup_decline">ไม่ ขอบคุณ</string>
+    <string name="fugueti_android_backup_restore">กู้คืน</string>
 </resources>

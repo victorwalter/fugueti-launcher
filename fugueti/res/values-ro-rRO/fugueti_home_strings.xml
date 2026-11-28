@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Configurează Fugueti</string>
     <string name="fugueti_onboarding_welcome">Bun venit în Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Descoperă noul Fugueti</string>
+    <string name="fugueti_android_backup_title">Restabilește backupul</string>
+    <string name="fugueti_android_backup_message">A fost găsit un backup Android al ecranului de pornire. Vrei să îl restabilești?</string>
+    <string name="fugueti_android_backup_decline">Nu, mulțumesc</string>
+    <string name="fugueti_android_backup_restore">Restabilește</string>
 </resources>

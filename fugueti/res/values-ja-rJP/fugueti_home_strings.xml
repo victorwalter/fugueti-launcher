@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Fuguetiをセットアップする</string>
     <string name="fugueti_onboarding_welcome">Fugueti へようこそ！</string>
     <string name="fugueti_onboarding_major_upgrade_title">新しいFuguetiを使おう</string>
+    <string name="fugueti_android_backup_title">バックアップを復元</string>
+    <string name="fugueti_android_backup_message">ホーム画面の Android バックアップが見つかりました。復元しますか？</string>
+    <string name="fugueti_android_backup_decline">復元しない</string>
+    <string name="fugueti_android_backup_restore">復元</string>
 </resources>

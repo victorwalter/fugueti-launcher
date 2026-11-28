@@ -1,5 +1,22 @@
 # Fugueti Launcher changelog
 
+## Unreleased
+
+* New installs no longer ask for notification access the first time At a Glance's settings
+  open, and At a Glance no longer shows "Tap to set up": Now playing, the only item that needs
+  that access, starts off. Turn it on in At a Glance > Now playing. Existing setups keep it as
+  it was.
+* New installs start with a 4 x 5 home screen and 4 dock icons on phones (Phone, Messages, the
+  browser and Camera). Existing setups keep their grid.
+* Android's own backup (Google account) now holds the whole setup, like a Fugueti backup file:
+  the home screen, Fugueti's settings, custom icons, drawer folders, fonts and saved wallpapers.
+  Before, it held only part of the settings and the home screen came back empty on a reinstall
+  or a new phone.
+* When Android restores that backup on install, Fugueti asks on its first start whether to
+  restore it or start fresh.
+* Fugueti's settings have their own icon, a gear in the Fugueti colors. Before, opening the
+  settings flashed Lawnchair's settings icon on the splash screen.
+
 ## 16.0.5 (2026-11-27)
 
 * The Google Play version (`app.fugueti.launcher.play`) explains where to get the Fugueti Feed

@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Aseta Fugueti</string>
     <string name="fugueti_onboarding_welcome">Tervetuloa Fuguetiiin!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Tutustu uuteen Fuguetiiin</string>
+    <string name="fugueti_android_backup_title">Palauta varmuuskopio</string>
+    <string name="fugueti_android_backup_message">Aloitusnäytöstäsi löytyi Android-varmuuskopio. Haluatko palauttaa sen?</string>
+    <string name="fugueti_android_backup_decline">Ei kiitos</string>
+    <string name="fugueti_android_backup_restore">Palauta</string>
 </resources>

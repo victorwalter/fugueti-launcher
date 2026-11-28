@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Fugueti Launcher, an Android launcher based on Lawnchair.
+  ~ Copyright (C) 2026 Fugueti Launcher contributors
+  ~ SPDX-License-Identifier: GPL-3.0-or-later
+  -->
+<!-- Android 12+: what Android's backup and device transfer take (same as backupscheme.xml). -->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- The whole databases folder: Lawnchair names the home screen database after its grid
+             (launcher_{rows}_{columns}_{dock}.db), so no fixed list covers it. Caches and
+             temporary files stay out. -->
+        <include domain="database" path="." />
+        <exclude domain="database" path="app_icons.db" />
+        <exclude domain="database" path="app_icons.db-journal" />
+        <exclude domain="database" path="app_icons.db-wal" />
+        <exclude domain="database" path="app_icons.db-shm" />
+        <exclude domain="database" path="widgetpreviews.db" />
+        <exclude domain="database" path="widgetpreviews.db-journal" />
+        <exclude domain="database" path="widgetpreviews.db-wal" />
+        <exclude domain="database" path="widgetpreviews.db-shm" />
+        <exclude domain="database" path="backup.db" />
+        <exclude domain="database" path="backup.db-journal" />
+        <exclude domain="database" path="backup.db-wal" />
+        <exclude domain="database" path="backup.db-shm" />
+        <exclude domain="database" path="minimal.db" />
+        <exclude domain="database" path="minimal.db-journal" />
+        <exclude domain="database" path="minimal.db-wal" />
+        <exclude domain="database" path="minimal.db-shm" />
+        <exclude domain="database" path="nova.db" />
+        <exclude domain="database" path="nova.db-journal" />
+        <exclude domain="database" path="nova.db-wal" />
+        <exclude domain="database" path="nova.db-shm" />
+        <exclude domain="database" path="nova_workspace.db" />
+        <exclude domain="database" path="nova_workspace.db-journal" />
+        <exclude domain="database" path="nova_workspace.db-wal" />
+        <exclude domain="database" path="nova_workspace.db-shm" />
+        <exclude domain="database" path="restored.db" />
+        <exclude domain="database" path="restored.db-journal" />
+        <exclude domain="database" path="restored.db-wal" />
+        <exclude domain="database" path="restored.db-shm" />
+        <exclude domain="database" path="restored.db.owner" />
+        <include domain="sharedpref" path="com.android.launcher3.prefs.xml" />
+        <!-- Fugueti's settings (PreferenceManager2), custom fonts and saved wallpapers. -->
+        <include domain="file" path="datastore/preferences.preferences_pb" />
+        <include domain="file" path="customFonts" />
+        <include domain="file" path="wallpapers" />
+        <include domain="file" path="downgrade_schema.json" />
+    </cloud-backup>
+    <device-transfer>
+        <!-- The whole databases folder: Lawnchair names the home screen database after its grid
+             (launcher_{rows}_{columns}_{dock}.db), so no fixed list covers it. Caches and
+             temporary files stay out. -->
+        <include domain="database" path="." />
+        <exclude domain="database" path="app_icons.db" />
+        <exclude domain="database" path="app_icons.db-journal" />
+        <exclude domain="database" path="app_icons.db-wal" />
+        <exclude domain="database" path="app_icons.db-shm" />
+        <exclude domain="database" path="widgetpreviews.db" />
+        <exclude domain="database" path="widgetpreviews.db-journal" />
+        <exclude domain="database" path="widgetpreviews.db-wal" />
+        <exclude domain="database" path="widgetpreviews.db-shm" />
+        <exclude domain="database" path="backup.db" />
+        <exclude domain="database" path="backup.db-journal" />
+        <exclude domain="database" path="backup.db-wal" />
+        <exclude domain="database" path="backup.db-shm" />
+        <exclude domain="database" path="minimal.db" />
+        <exclude domain="database" path="minimal.db-journal" />
+        <exclude domain="database" path="minimal.db-wal" />
+        <exclude domain="database" path="minimal.db-shm" />
+        <exclude domain="database" path="nova.db" />
+        <exclude domain="database" path="nova.db-journal" />
+        <exclude domain="database" path="nova.db-wal" />
+        <exclude domain="database" path="nova.db-shm" />
+        <exclude domain="database" path="nova_workspace.db" />
+        <exclude domain="database" path="nova_workspace.db-journal" />
+        <exclude domain="database" path="nova_workspace.db-wal" />
+        <exclude domain="database" path="nova_workspace.db-shm" />
+        <exclude domain="database" path="restored.db" />
+        <exclude domain="database" path="restored.db-journal" />
+        <exclude domain="database" path="restored.db-wal" />
+        <exclude domain="database" path="restored.db-shm" />
+        <exclude domain="database" path="restored.db.owner" />
+        <include domain="sharedpref" path="com.android.launcher3.prefs.xml" />
+        <!-- Fugueti's settings (PreferenceManager2), custom fonts and saved wallpapers. -->
+        <include domain="file" path="datastore/preferences.preferences_pb" />
+        <include domain="file" path="customFonts" />
+        <include domain="file" path="wallpapers" />
+        <include domain="file" path="downgrade_schema.json" />
+    </device-transfer>
+</data-extraction-rules>

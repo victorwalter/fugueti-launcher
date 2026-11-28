@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Ρύθμιση του εκκινητή Fugueti</string>
     <string name="fugueti_onboarding_welcome">Καλώς ήρθατε στον εκκινητή Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Γνωρίστε τον νέο εκκινητή Fugueti</string>
+    <string name="fugueti_android_backup_title">Επαναφορά αντιγράφου ασφαλείας</string>
+    <string name="fugueti_android_backup_message">Βρέθηκε αντίγραφο ασφαλείας Android της αρχικής σας οθόνης. Θέλετε να το επαναφέρετε;</string>
+    <string name="fugueti_android_backup_decline">Όχι, ευχαριστώ</string>
+    <string name="fugueti_android_backup_restore">Επαναφορά</string>
 </resources>

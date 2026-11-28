@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Seadista Fugueti</string>
     <string name="fugueti_onboarding_welcome">Tere tulemast Fuguetii kasutajaks!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Tutvu uue Fuguetiiga</string>
+    <string name="fugueti_android_backup_title">Taasta varukoopia</string>
+    <string name="fugueti_android_backup_message">Leiti teie avaekraani Androidi varukoopia. Kas soovite selle taastada?</string>
+    <string name="fugueti_android_backup_decline">Ei, aitäh</string>
+    <string name="fugueti_android_backup_restore">Taasta</string>
 </resources>

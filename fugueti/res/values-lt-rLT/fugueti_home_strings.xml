@@ -5,4 +5,8 @@
     <string name="fugueti_onboarding_open_settings_title">Nustatykite Fugueti</string>
     <string name="fugueti_onboarding_welcome">Sveiki atvykę į Fugueti!</string>
     <string name="fugueti_onboarding_major_upgrade_title">Susipažinkite su naujuoju Fugueti</string>
+    <string name="fugueti_android_backup_title">Atkurti atsarginę kopiją</string>
+    <string name="fugueti_android_backup_message">Rasta jūsų pagrindinio ekrano „Android“ atsarginė kopija. Ar norite ją atkurti?</string>
+    <string name="fugueti_android_backup_decline">Ne, ačiū</string>
+    <string name="fugueti_android_backup_restore">Atkurti</string>
 </resources>
